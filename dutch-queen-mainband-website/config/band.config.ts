@@ -218,11 +218,13 @@ export const defaultConfig: BandWebsiteConfig = {
       long: "Vijf bekende muzikanten met één gedeelde liefde. De ene helft van dit gezelschap groeide op met de muziek van Queen, de andere helft ontdekte recent de juweeltjes uit het rijke oeuvre van de band. Live brengt deze gelegenheidsformatie genaamd The Dutch Queen een ode aan Queen, de band die steeds grenzen opzocht en vervolgens stadions wist te vullen. The Dutch Queen speelt niet alleen de hits, maar ook het minder bekende materiaal.\n\nVan de grote anthems zoals 'Bohemian Rhapsody' en 'We Will Rock You' tot de diepere cuts die echte fans zullen herkennen. Met een combinatie van technische virtuositeit en passie voor het originele materiaal brengt The Dutch Queen een eerbetoon aan een van de grootste rockbands aller tijden.",
     },
     contact: {
-      email: "contact@thedutchqueen.nl",
+      email: "info@thedutchqueen.com",
+      phone: "+31 6 5589 5579",
     },
     social: {
-      facebook: "https://facebook.com/thedutchqueen",
-      instagram: "https://instagram.com/thedutchqueen",
+      facebook: "https://www.facebook.com/thedutchqueen",
+      instagram: "https://www.instagram.com/thedutchqueen/",
+      youtube: "https://youtube.com/watch?v=xGIhqcitNIU&feature=youtu.be",
     },
     seo: {
       metaTitle: "The Dutch Queen | Official Website",

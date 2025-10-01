@@ -263,6 +263,9 @@ export function getAnimationClasses() {
  */
 export function getBandContent() {
   try {
+    // Get config for social and contact info
+    const config = getConfig();
+
     return {
       bandName: bandProfile.name || "The Dutch Queen",
       tagline: bandProfile.tagline || "Een ode aan Queen",
@@ -271,8 +274,8 @@ export function getBandContent() {
         medium: aboutData.descriptions.medium,
         long: aboutData.descriptions.long,
       },
-      social: {},
-      contact: { email: "" },
+      social: config.content.social || {},
+      contact: config.content.contact || { email: "" },
     };
   } catch (error) {
     console.error("Error loading band content from files:", error);

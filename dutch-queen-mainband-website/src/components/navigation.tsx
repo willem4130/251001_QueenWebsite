@@ -1,7 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, Facebook, Instagram, Mail } from "lucide-react";
+import {
+  Menu,
+  X,
+  Facebook,
+  Instagram,
+  Mail,
+  Phone,
+  Youtube,
+} from "lucide-react";
 import { useBandContent } from "@/hooks/useConfig";
 
 const navigation = [
@@ -66,16 +74,32 @@ export function Navigation() {
               <Facebook className="h-6 w-6" />
             </a>
             <a
-              href="#"
+              href={content.social.instagram || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg p-2 text-white/80 transition-all duration-500 hover:bg-amber-900/20 hover:text-white hover:shadow-lg hover:shadow-amber-900/20 hover:backdrop-blur-sm"
             >
               <Instagram className="h-6 w-6" />
+            </a>
+            <a
+              href={content.social.youtube || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg p-2 text-white/80 transition-all duration-500 hover:bg-amber-900/20 hover:text-white hover:shadow-lg hover:shadow-amber-900/20 hover:backdrop-blur-sm"
+            >
+              <Youtube className="h-7 w-7" />
             </a>
             <a
               href={`mailto:${content.contact.email}`}
               className="rounded-lg p-2 text-white/80 transition-all duration-500 hover:bg-amber-900/20 hover:text-white hover:shadow-lg hover:shadow-amber-900/20 hover:backdrop-blur-sm"
             >
               <Mail className="h-6 w-6" />
+            </a>
+            <a
+              href={`tel:${content.contact.phone}`}
+              className="rounded-lg p-2 text-white/80 transition-all duration-500 hover:bg-amber-900/20 hover:text-white hover:shadow-lg hover:shadow-amber-900/20 hover:backdrop-blur-sm"
+            >
+              <Phone className="h-6 w-6" />
             </a>
           </div>
 
@@ -122,16 +146,32 @@ export function Navigation() {
                 <Facebook className="h-7 w-7" />
               </a>
               <a
-                href="#"
+                href={content.social.instagram || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-lg p-2 text-white/80 transition-all duration-500 hover:bg-amber-900/20 hover:text-white hover:backdrop-blur-sm"
               >
                 <Instagram className="h-7 w-7" />
+              </a>
+              <a
+                href={content.social.youtube || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg p-2 text-white/80 transition-all duration-500 hover:bg-amber-900/20 hover:text-white hover:backdrop-blur-sm"
+              >
+                <Youtube className="h-7 w-7" />
               </a>
               <a
                 href={`mailto:${content.contact.email}`}
                 className="rounded-lg p-2 text-white/80 transition-all duration-500 hover:bg-amber-900/20 hover:text-white hover:backdrop-blur-sm"
               >
                 <Mail className="h-7 w-7" />
+              </a>
+              <a
+                href={`tel:${content.contact.phone}`}
+                className="rounded-lg p-2 text-white/80 transition-all duration-500 hover:bg-amber-900/20 hover:text-white hover:backdrop-blur-sm"
+              >
+                <Phone className="h-7 w-7" />
               </a>
             </div>
           </div>
