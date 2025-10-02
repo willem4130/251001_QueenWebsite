@@ -469,37 +469,3 @@ export function exportForQueenClaude(config: BandWebsiteConfig) {
     version: config.version,
   };
 }
-
-/**
- * Import configuration from Queen Claude format
- */
-export function importFromQueenClaude(
-  queenClaudeConfig: Record<string, unknown>
-): BandWebsiteConfig {
-  return {
-    core: {
-      primaryColorPalette: queenClaudeConfig.design_system.colors,
-      typographyPair: queenClaudeConfig.design_system.typography,
-      heroBackground: defaultConfig.core.heroBackground, // Keep default
-      sectionBackgroundStrategy: defaultConfig.core.sectionBackgroundStrategy,
-      animationIntensity: queenClaudeConfig.animation_system.intensity,
-      colorTemperature: defaultConfig.core.colorTemperature,
-      contrastLevel: defaultConfig.core.contrastLevel,
-      borderRadiusScale: queenClaudeConfig.design_system.border_radius,
-    },
-    genre: {
-      particleEffectsDensity: queenClaudeConfig.animation_system.particles,
-      glowIntensity: queenClaudeConfig.animation_system.glow,
-      textureOverlays: defaultConfig.genre.textureOverlays,
-      motionSpeedMultiplier:
-        queenClaudeConfig.animation_system.speed_multiplier,
-      shadowIntensity: queenClaudeConfig.design_system.shadows,
-      backgroundFocusEffect: defaultConfig.genre.backgroundFocusEffect,
-      colorSaturation: defaultConfig.genre.colorSaturation,
-      layoutSpacing: queenClaudeConfig.design_system.spacing,
-    },
-    content: queenClaudeConfig.content,
-    media: queenClaudeConfig.media,
-    version: queenClaudeConfig.version,
-  };
-}
