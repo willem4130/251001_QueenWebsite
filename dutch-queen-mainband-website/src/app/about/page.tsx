@@ -37,22 +37,23 @@ export default function AboutPage() {
           </motion.div>
 
           <motion.div
-            className="leading-relaxed"
+            className="space-y-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <p className="mb-12 text-lg font-semibold text-white">
-              {paragraphs[0]}
-            </p>
-
-            <div className="space-y-6">
-              {paragraphs.slice(1).map((paragraph, index) => (
-                <p key={index} className="text-sm text-white/70">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
+            {paragraphs.map((paragraph, index) => (
+              <p
+                key={index}
+                className={
+                  index === 0
+                    ? "text-xl font-medium leading-relaxed text-white"
+                    : "text-lg font-normal leading-relaxed text-white"
+                }
+              >
+                {paragraph}
+              </p>
+            ))}
           </motion.div>
         </div>
       </section>

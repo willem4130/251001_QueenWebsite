@@ -121,7 +121,7 @@ export function LogoHero({ className = "" }: LogoHeroProps) {
   return (
     <div
       className={`flex h-full w-full ${positionClasses[heroConfig.logo.position]} ${className}`}
-      style={{ marginTop: "200px" }}
+      style={{ marginLeft: "calc(-17vw + 90px)", marginTop: "200px" }}
     >
       <motion.div
         initial={variants.initial}
@@ -145,6 +145,8 @@ export function LogoHero({ className = "" }: LogoHeroProps) {
             width: "auto",
             height: "auto",
             filter: "drop-shadow(0 4px 8px rgba(0, 0, 0, 0.9))",
+            transform: "scale(1.5)",
+            transformOrigin: "center center",
           }}
         />
       </motion.div>

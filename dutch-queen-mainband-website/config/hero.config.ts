@@ -47,9 +47,9 @@ export const heroConfig: HeroConfig = {
 
     // Responsive scaling multipliers
     scale: {
-      mobile: 0.975, // 30% bigger
-      tablet: 1.365, // 30% bigger
-      desktop: 1.95, // 30% bigger
+      mobile: 0.6,
+      tablet: 0.75,
+      desktop: 1.05,
     },
   },
 };

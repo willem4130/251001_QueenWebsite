@@ -180,7 +180,7 @@ export const defaultConfig: BandWebsiteConfig = {
     },
     heroBackground: {
       type: "image",
-      source: "/hero-bg.jpg",
+      source: "/hero-bg-optimized.jpg",
       overlayIntensity: 0.4,
     },
     sectionBackgroundStrategy: {
@@ -245,8 +245,8 @@ export const defaultConfig: BandWebsiteConfig = {
   // Media Assets
   media: {
     hero: {
-      background: "/hero-bg.jpg",
-      fallbackImage: "/hero-bg.jpg",
+      background: "/hero-bg-optimized.jpg",
+      fallbackImage: "/hero-bg-optimized.jpg",
     },
     sections: {
       about: ["/videos/about-bg-1.mp4"],

@@ -87,34 +87,18 @@ function HomeContent() {
                   "0 2px 4px rgba(0, 0, 0, 0.9), 0 4px 8px rgba(0, 0, 0, 0.7)",
               }}
             >
-              {(() => {
-                const fullText = content.description.long;
-                const sentences = fullText.split(". ");
-                const firstSentence = sentences[0] + ".";
-                const remainingText = sentences.slice(1).join(". ");
-
-                return (
-                  <>
-                    <p className="mb-8 text-2xl font-semibold leading-relaxed md:text-3xl">
-                      {firstSentence}
-                    </p>
-                    {remainingText.split(". ").map(
-                      (sentence, i) =>
-                        sentence.trim() && (
-                          <p
-                            key={i}
-                            className="text-lg font-light leading-relaxed md:text-xl"
-                          >
-                            {sentence.trim()}
-                            {i < remainingText.split(". ").length - 1
-                              ? "."
-                              : ""}
-                          </p>
-                        )
-                    )}
-                  </>
-                );
-              })()}
+              {content.description.long.split("\n\n").map((paragraph, i) => (
+                <p
+                  key={i}
+                  className={
+                    i === 0
+                      ? "text-xl font-medium leading-relaxed"
+                      : "text-lg font-normal leading-relaxed"
+                  }
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </motion.div>
         </div>
